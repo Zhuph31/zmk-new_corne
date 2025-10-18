@@ -117,6 +117,8 @@
             #binding-cells = <0>;
             bindings = <&none &kp LS(K) &kp I &kp N &kp D &kp EXCL &kp LS(P) &kp O &kp S &kp T &kp EXCL &kp LS(B) &kp A &kp N &kp A &kp N &kp A &kp EXCL &kp N7>;
             label = "PW0";
+            wait-ms = <30>;
+            tap-ms = <30>;
         };
 
         pw1: pw1 {
@@ -124,6 +126,8 @@
             #binding-cells = <0>;
             bindings = <&none &kp LS(K) &kp I &kp N &kp D &kp L &kp E &kp EXCL &kp LS(P) &kp H &kp I &kp L &kp I &kp P &kp S &kp EXCL &kp LS(S) &kp C &kp O &kp T &kp T &kp I &kp E &kp S &kp EXCL &kp N7>;
             label = "PW1";
+            wait-ms = <30>;
+            tap-ms = <30>;
         };
     };
 
