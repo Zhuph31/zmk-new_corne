@@ -1,5 +1,5 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 40    // default: 10
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -14,29 +14,67 @@
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
-&msc {
-    acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <100>;       // 300
-    delay-ms = <0>;                   // 0
+#define KEYS_R 7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41
+#define KEYS_L 0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 34
+#define KEYS_THUMB 42 43 44 45 46 47
+
+&lt {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    require-prior-idle-ms = <100>;
+    tapping-term-ms = <280>;
+    quick-tap-ms = <175>;
+    bindings = <&mo>, <&kp>;
+    hold-trigger-key-positions = <KEYS_R KEYS_L KEYS_THUMB>; 
+    hold-trigger-on-release;
 };
 
-&mmv {
-    time-to-max-speed-ms = <500>;
-    acceleration-exponent = <1>;
-    trigger-period-ms = <16>;
+&mt {
+    quick-tap-ms = <200>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <170>;
+};
+
+&msc {
+    x-input-code = <INPUT_REL_HWHEEL>;
+    y-input-code = <INPUT_REL_WHEEL>;
+    time-to-max-speed-ms = <0>;
+    delay-ms = <0>;
+    acceleration-exponent = <2>;
 };
 
 &soft_off { hold-time-ms = <2000>; };
 
 / {
     behaviors {
-        td0: td0 {
-            compatible = "zmk,behavior-tap-dance";
-            display-name = "Shift/Caps Lock Tap Dance";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+        hml: home_row_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <100>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R KEYS_THUMB>; 
+            hold-trigger-on-release;
         };
-    };
+        hmr: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <100>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L KEYS_THUMB>; 
+            hold-trigger-on-release;
+        };
+    }; 
+
+    combos { compatible = "zmk,combos"; };
+
+    macros {};
 
     rgb_encoder: rgb_encoder {
         compatible = "zmk,behavior-sensor-rotate";
