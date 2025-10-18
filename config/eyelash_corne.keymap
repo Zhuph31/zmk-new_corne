@@ -148,12 +148,12 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        layer_3 {
-            display-name = "Fn";
+        utils_layer {
+            display-name = "Utils";
             bindings = <
-&studio_unlock  &kp F1      &kp F2     &kp F3       &kp F4     &kp F5                                  &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
-&none          &none      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
-&none          &sys_reset  &none     &bootloader  &none     &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &none       &none     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
+&none  &none  &none        &none            &none             &none                                  &mmv MOVE_UP                     &none  &kp F8   &kp F7   &kp F6   &kp F5          &none
+&none          &none      &kp LGUI           &kp LCTRL        &kp LSHIFT  &none                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none  &kp F12  &kp F11  &kp F10  &kp F9  &none 
+&none  &none       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_PLAY_PAUSE  &none  &kp C_MUTE                    &mmv MOVE_DOWN                    &none  &kp F4   &kp F3   &kp F2   &kp F1  &none
                                        &none       &none     &none                                                                   &none       &none     &none
             >;
 
