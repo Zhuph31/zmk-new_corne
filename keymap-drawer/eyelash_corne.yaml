@@ -65,19 +65,19 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '0', s: )}
-  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
+  - {t: '4', h: LGUI}
+  - {t: '5', h: '$$mdi:apple-keyboard-control$$', s: '%'}
+  - {t: '6', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-up-bold$$
-  - $$mdi:arrow-right-bold$$
-  - HOME
-  - PG UP
+  - {t: '$$mdi:arrow-down-bold$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '$$mdi:arrow-up-bold$$', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '$$mdi:arrow-right-bold$$', h: RGUI}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '1'
@@ -86,17 +86,17 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - RGB EFR
-  - RGB SPI
-  - RGB BRI
-  - RGB BRD
+  - HOME
+  - {t: PgDn, h: '$$mdi:apple-keyboard-option$$'}
+  - PgUp
   - END
-  - PG DN
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: INS, type: held alternate}
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   SYMBOL:
   - {t: '$$mdi:transfer$$', type: trans}
