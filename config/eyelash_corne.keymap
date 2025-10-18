@@ -84,8 +84,6 @@
         };
     }; 
 
-    combos { compatible = "zmk,combos"; };
-
     macros {};
 
     rgb_encoder: rgb_encoder {
