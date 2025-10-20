@@ -104,9 +104,9 @@ layers:
   - '&'
   - '*'
   - (
-  - '~'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - {t: '`', s: '~'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '{'
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
@@ -132,10 +132,10 @@ layers:
   - '!'
   - '@'
   - '#'
-  - {t: /, s: '?'}
+  - '~'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - {t: ;, s: ':'}
+  - {t: '`', s: '~'}
   - {t: '''', s: '"'}
   - '"'
   - {t: \, s: '|'}
