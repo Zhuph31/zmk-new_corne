@@ -18,8 +18,8 @@
 #define KEYS_THUMB 42 43 44 45 46 47
 
 &sk {
-  release-after-ms = <900>;
-  quick-release;
+    release-after-ms = <900>;
+    quick-release;
 };
 
 &lt {
@@ -59,11 +59,11 @@
 
 / {
     behaviors {
-        td0: td0 {
+        stick_double_shift: td0 {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+            bindings = <&sk RSHIFT>, <&double_shift>;
         };
 
         hml: home_row_mod_left {
@@ -134,6 +134,13 @@
             wait-ms = <30>;
             tap-ms = <30>;
         };
+
+        double_shift: double_shift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_SHIFT &kp RIGHT_SHIFT>;
+            label = "DOUBLE_SHIFT";
+        };
     };
 
     keymap {
@@ -142,10 +149,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp DEL   &kp Q  &kp W        &kp E         &kp R            &kp T                                &kp UP                &kp Y            &kp U            &kp I            &kp O            &kp SEMICOLON  &none
-&kp CAPS  &kp A  &hml LGUI S  &hml LCTRL D  &hml LSHFT F     &kp G                      &kp LEFT  &kp ENTER  &kp RIGHT  &kp H            &hmr RSHFT J     &hmr RCTRL K     &hmr LEFT_GUI L  &kp P          &none
-&none     &kp Z  &kp X        &kp C         &hml LEFT_ALT V  &kp B        &kp C_MUTE              &kp DOWN              &kp N            &hmr LEFT_ALT M  &kp COMMA        &kp DOT          &kp FSLH       &none
-                              &lt 3 ESCAPE  &lt 1 TAB        &lt 2 SPACE                                                &lt 1 BACKSPACE  &lt 4 ENTER      &sk RIGHT_SHIFT
+&kp DEL   &kp Q  &kp W        &kp E         &kp R            &kp T                                &kp UP                &kp Y            &kp U            &kp I                &kp O            &kp SEMICOLON  &none
+&kp CAPS  &kp A  &hml LGUI S  &hml LCTRL D  &hml LSHFT F     &kp G                      &kp LEFT  &kp ENTER  &kp RIGHT  &kp H            &hmr RSHFT J     &hmr RCTRL K         &hmr LEFT_GUI L  &kp P          &none
+&none     &kp Z  &kp X        &kp C         &hml LEFT_ALT V  &kp B        &kp C_MUTE              &kp DOWN              &kp N            &hmr LEFT_ALT M  &kp COMMA            &kp DOT          &kp FSLH       &none
+                              &lt 3 ESCAPE  &lt 1 TAB        &lt 2 SPACE                                                &lt 1 BACKSPACE  &lt 4 ENTER      &stick_double_shift
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
