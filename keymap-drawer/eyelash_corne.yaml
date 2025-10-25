@@ -48,7 +48,7 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: SYMBOL}
   - {t: '$$mdi:backspace$$', h: NUMBER}
   - {t: '$$mdi:keyboard-return$$', h: MOUSE}
-  - '&stick_double_shift'
+  - '&sticky_double_shift'
   NUMBER:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
