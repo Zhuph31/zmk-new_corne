@@ -203,5 +203,16 @@
                          &none          &none                 &none                                &none           &none           &none
             >;
         };
+
+        others_layer {
+            display-name = "OTHER";
+            bindings = <
+&none  &none  &none      &none          &none                 &none                  &none         &none   & none  &none   &none   &none  &none
+&none  &none  &none      &none  &none  &none           &none  &none  &none  &none  &none  &none  &none   &none  &none
+&none  &none  &none  &none       &none              &none  &none           &none         &none           &none       &none     &none        &none  &none
+                         &none          &none                 &none                                &none           &none           &none
+            >;
+        };
+
     };
 };
