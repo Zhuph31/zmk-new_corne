@@ -297,13 +297,11 @@ layers:
 combos:
 - p: [1, 15, 29]
   k: '&soft_off'
-- p: [2, 3]
-  k: $$mdi:keyboard-tab$$
-- p: [16, 15]
+- p: [31, 30]
   k: $$mdi:keyboard-esc$$
-- p: [24, 25]
+- p: [10, 9]
   k: {t: '$$mdi:backspace$$', type: backspace}
 - p: [38, 39]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
-- p: [31, 30]
+- p: [3, 2]
   k: $$mdi:backspace-reverse-outline$$
