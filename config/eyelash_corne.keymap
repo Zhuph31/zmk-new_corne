@@ -115,19 +115,14 @@
             key-positions = <1 15 29>;
         };
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <2 3>;
-        };
-
         esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <16 15>;
+            key-positions = <31 30>;
         };
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <24 25>;
+            key-positions = <10 9>;
         };
 
         enter {
@@ -137,7 +132,7 @@
 
         delete {
             bindings = <&kp DELETE>;
-            key-positions = <31 30>;
+            key-positions = <3 2>;
         };
     };
 
