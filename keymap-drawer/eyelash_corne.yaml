@@ -43,7 +43,7 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:keyboard-esc$$', h: UTILS}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: UTILS}
   - {t: '$$mdi:keyboard-tab$$', h: MOUSE}
   - {t: '$$mdi:keyboard-space$$', h: SYMBOL}
   - {t: '$$mdi:backspace$$', h: NUMBER}
@@ -299,9 +299,5 @@ combos:
   k: '&soft_off'
 - p: [31, 30]
   k: $$mdi:keyboard-esc$$
-- p: [10, 9]
-  k: {t: '$$mdi:backspace$$', type: backspace}
 - p: [38, 39]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
-- p: [3, 2]
-  k: $$mdi:backspace-reverse-outline$$
